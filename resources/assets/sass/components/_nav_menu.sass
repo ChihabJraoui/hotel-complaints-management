@@ -1,0 +1,83 @@
+
+//  . Main Navigation -----------------------------------
+
+.navigation
+	position: fixed
+	z-index: 200
+	top: 0
+	right: 0
+	width: $sidebar-width
+	height: 100%
+	padding-top: $header-height-sm
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: flex-start
+	background-color: rgba(0,0,0,0.9)
+	transform: translateX($sidebar-width)
+	transition: transform 0.4s
+
+	+md
+		position: relative
+		top: auto
+		left: auto
+		width: auto
+		padding-top: 0
+		margin-left: auto
+		flex-direction: row
+		background-color: transparent
+		transform: translateX(0)
+
+	> a
+		position: relative
+		display: block
+		padding: 10px 20px
+		text-align: center
+		text-transform: uppercase
+		color: #DDD
+		transition: all .4s
+
+		&:hover
+			color: #FFF
+
+		&.active
+			color: $deep-orange
+
+		+sm-down
+			&:active
+				background-color: $grey-900
+
+		+md
+			display: inline
+			padding: 10px
+			font-size: 14px
+			color: #EEE
+
+			&::before, &::after
+				content: ""
+				position: absolute
+				left: 0
+				height: 1px
+				width: 100%
+				background-color: #EEE
+				opacity: 0
+				transition: all .4s
+
+			&::before
+				top: 50%
+
+			&::after
+				bottom: 50%
+
+			&:hover::before
+				top: 0
+				opacity: 1
+
+			&:hover::after
+				bottom: 0
+				opacity: 1
+
+	// Opened
+
+	&.is-opened
+		transform: translateX(0)

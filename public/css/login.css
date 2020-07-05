@@ -1,0 +1,240 @@
+/*  . Media Queries
+ * --------------------------------------- */
+.banner {
+  text-align: center;
+  height: 60vh;
+  padding-top: 60px;
+  transform-style: preserve-3d;
+  background-size: cover;
+  background-position: bottom center;
+  background-attachment: fixed; }
+  .banner-fh {
+    height: 100vh; }
+  .banner-lg {
+    height: 80vh; }
+  .banner-sm {
+    height: 40vh; }
+  .banner--content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translate(0, -50%);
+    color: #EEE; }
+  .banner-overlay-dark, .banner-overlay-light {
+    position: relative; }
+    .banner-overlay-dark:before, .banner-overlay-light:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+  .banner-overlay-dark {
+    color: #bbb; }
+    .banner-overlay-dark:before {
+      background-color: rgba(0, 0, 0, 0.6); }
+  .banner-overlay-light {
+    color: #444; }
+    .banner-overlay-light:before {
+      background-color: rgba(255, 255, 255, 0.6); }
+
+/*------------ HELPERS -------------- */
+.btn {
+  border-radius: 0;
+  text-transform: capitalize; }
+
+.form-control {
+  border-radius: 0 !important;
+  box-shadow: none; }
+  .form-control:focus {
+    box-shadow: none; }
+  .form-control[type=text], .form-control[type=email] {
+    padding: 10px; }
+
+.progress {
+  border-radius: 0;
+  height: auto;
+  background-color: #DDD; }
+
+.progress-bar {
+  padding: 10px;
+  background-color: #009688; }
+
+.dropdown-menu {
+  border-radius: 0;
+  border-top: 2px solid #3F5765; }
+  .dropdown-menu > li > a {
+    padding: 10px 20px; }
+  .dropdown-menu:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 10px;
+    border-bottom: 8px solid #3F5765; }
+
+.panel-default {
+  border: none;
+  border-top: 4px solid; }
+
+.breadcrumb {
+  border-radius: 0;
+  background-color: #FFF; }
+
+/*  . Owl Carousel
+ * ----------------------------------- */
+.main-owl-carousel,
+.owl-stage-outer,
+.owl-stage,
+.owl-item {
+  height: 100%; }
+
+.main-owl-carousel .item {
+  position: relative;
+  height: 100%;
+  background-position: center;
+  background-size: cover; }
+  .main-owl-carousel .item .item-overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .main-owl-carousel .item .site-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center; }
+.main-owl-carousel .owl-controls {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  .main-owl-carousel .owl-controls .owl-prev, .main-owl-carousel .owl-controls .owl-next {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: background-color, 0.4s;
+    -moz-transition: background-color, 0.4s;
+    transition: background-color, 0.4s; }
+    .main-owl-carousel .owl-controls .owl-prev > i, .main-owl-carousel .owl-controls .owl-next > i {
+      display: block;
+      font-size: 32px;
+      padding: 10px; }
+    .main-owl-carousel .owl-controls .owl-prev:hover, .main-owl-carousel .owl-controls .owl-next:hover {
+      background-color: rgba(250, 250, 250, 0.2); }
+  .main-owl-carousel .owl-controls .owl-prev {
+    left: 20px; }
+  .main-owl-carousel .owl-controls .owl-next {
+    right: 20px; }
+
+.owl-has-controls .owl-controls .owl-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  .owl-has-controls .owl-controls .owl-dots .owl-dot {
+    display: inline-block;
+    margin-right: 6px;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #DDD;
+    border-radius: 50%;
+    -webkit-transition: all, 0.2s;
+    -moz-transition: all, 0.2s;
+    transition: all, 0.2s; }
+    .owl-has-controls .owl-controls .owl-dots .owl-dot.active {
+      background-color: #DDD; }
+
+.tour-carousel .owl-item {
+  display: flex;
+  align-items: center;
+  height: 360px; }
+
+.material-icons {
+  vertical-align: middle; }
+
+.text-accent {
+  color: #FF530D; }
+
+.text-primary {
+  color: #3F5765; }
+
+.bg-primary-dark {
+  background-color: #354955; }
+
+.row.vertical-center {
+  display: table;
+  table-layout: fixed;
+  width: 100%; }
+  .row.vertical-center [class^=col-] {
+    display: table-cell;
+    vertical-align: middle;
+    float: none; }
+
+/*  . BASE
+ * ------------------------------- */
+/*  . MODULES
+ * ------------------------------- */
+.panel-login {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  @media screen and (min-width: 768px) {
+    .panel-login {
+      width: 400px; } }
+  .panel-login--heading {
+    padding: 30px;
+    text-align: center; }
+    .panel-login--heading > h3 {
+      font-size: 50px;
+      font-weight: 700;
+      font-family: "Poiret One", sans-serif; }
+  .panel-login--body {
+    padding: 10px; }
+
+/*  . Bootstrap
+ * --------------------------------- */
+.btn {
+  border-radius: 0;
+  text-transform: capitalize; }
+
+.form-control {
+  border-radius: 0 !important;
+  box-shadow: none; }
+  .form-control:focus {
+    box-shadow: none; }
+  .form-control[type=text], .form-control[type=password], .form-control[type=email] {
+    padding: 25px; }
+
+/*# sourceMappingURL=login.css.map */

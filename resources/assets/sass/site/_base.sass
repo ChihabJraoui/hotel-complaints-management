@@ -1,0 +1,72 @@
+
+//  . BASE
+	----------------------------------------------
+
+html, body
+	height: 100%
+
+
+body
+	position: relative
+	margin: 0
+	font:
+		family: $font-family-base
+		size: 16px
+	color: $color-base
+	background-color: $background-base
+
+
+a
+	color: $link-color
+	transition: color .3s
+
+	&:hover
+		color: $link-color-hover
+
+	&:hover, &:active, &:focus
+		text-decoration: none
+
+
+button
+	cursor: pointer
+
+	&:focus,
+	&:focus:active,
+	&:active
+		outline: none
+
+
+textarea
+	resize: vertical
+
+p
+	font-size: 15px
+
+ul
+	list-style: none
+
+
+footer.main-footer hr
+	border-color: #AAA
+
+
+/*------------- TYPOGRAPHY ---------------
+
+
+h1, h2, h3, h4, h5, h6
+	text-transform: capitalize
+	font-family: 'Raleway', sans-serif
+
+
+h2
+	font-size: 32px
+
+h3
+	font-size: 28px
+
+h4
+	font-size: 24px
+
+
+button
+	cursor: pointer

@@ -1,0 +1,361 @@
+
+@import "../components/spinner"
+@import "../components/page"
+@import "../components/toolbar"
+
+
+//  . Header Components ------------------------------------
+
+.main-title
+	text-transform: uppercase
+	letter-spacing: 4px
+	font-size: 40px
+	font-weight: 700
+
+.main-subtitle
+	font-size: 24px
+	font-weight: 200
+
+.main-header--page-title
+	display: inline-block
+	margin-left: 20px
+	line-height: $header-height
+	font-weight: 700
+	font-size: 20px
+
+.site-header
+
+	// Toggle Menu Button
+	> .btn-toggle
+		width: $header-height
+		line-height: $header-height
+		height: $header-height
+		border: none
+		border-right: 1px solid #DDD
+		background-color: transparent
+		color: $grey-900
+
+		+lg
+			display: none
+
+		&:hover
+			background-color: #EEE
+
+	// Page title
+	> .page-title
+		padding-left: 20px
+
+		> h2
+			margin: 0
+			font-size: 16px
+			font-weight: 600
+
+	// Items
+	> .items
+		padding: 0
+		margin: 0 0 0 auto
+
+		> li
+			line-height: $header-height
+			display: inline-block
+			border-left: 1px solid #DDD
+
+			> a
+				display: block
+				padding: 0 15px
+				color: $grey-800
+
+				&:hover
+					background-color: #EEE
+
+
+// . Sidebar Components ------------------------------
+
+.site-sidebar
+
+	// Brand
+	> .brand
+		text-align: center
+		display: inline-block
+		width: $sidebar-width
+		background-color: $blue-grey-800
+
+		> a
+			line-height: $header-height
+			font:
+				family: $font-family-brand
+				size: 40px
+			color: $grey-400
+
+			&:hover
+				color: $white
+
+
+	> .sidebar-menu
+		padding: 0
+
+		> li
+
+			&.active
+				> a
+					color: $accent-color !important
+
+			&.title
+				margin-top: 20px
+				padding-left: 20px
+				font:
+					size: 10px
+
+			> a
+				display: block
+				padding: 8px 30px
+				text-align: start
+				font-size: 14px
+				color: #DDD
+
+				> i
+					margin-right: 8px
+					font-size: 16px
+
+				&:hover
+					color: $white
+					background-color: darken($primary-color-dark, 5%)
+
+
+
+/*  . NAVIGATION
+	-----------------------------------
+
+/* . Navigation Menu
+
+.navigation-menu
+	position: fixed
+	top: 0
+	right: 0
+	width: 300px
+	height: 100%
+	+transform(translateX(300px))
+	+transition(transform 0.4s)
+	background-color: rgba(0,0,0,0.9)
+
+	+lg
+		position: relative
+		top: auto
+		left: auto
+		width: auto
+		float: right
+		+transform(translateX(0))
+		background-color: transparent
+
+
+	> ul
+		height: 100%
+		padding: $header-height 0 0 0
+		display: block
+		margin: 0 auto
+
+		+lg
+			height: auto
+			line-height: $header-height
+			padding: 0
+
+		> li
+			position: relative
+			display: block
+			text-align: center
+			margin-bottom: 10px
+			+lg
+				display: inline-block
+				margin-bottom: 0
+				margin-right: 10px
+
+			&:last-child
+				margin-right: 0
+
+			&:hover .nav-menu-dropdown
+				height: 100%
+
+			> a
+				position: relative
+				display: block
+				padding: 10px 20px
+				color: #DDD
+				text-align: center
+				+transition(all .4s)
+
+				&:hover
+					color: #FFF
+
+				+lg
+					display: inline
+					padding: 10px
+					color: #EEE
+					text-transform: capitalize
+
+
+					&:before, &:after
+						content: ""
+						position: absolute
+						left: 0
+						height: 1px
+						width: 100%
+						background-color: #EEE
+						opacity: 0
+						+transition(all .4s)
+
+					&:before
+						top: 50%
+
+					&:after
+						bottom: 50%
+
+					&:hover:before
+						top: 0
+						opacity: 1
+
+					&:hover:after
+						bottom: 0
+						opacity: 1
+
+
+//  . Page Location
+	------------------------------------------------------
+
+.page-location
+	padding: 10px 0
+	margin-top: -30px
+	margin-bottom: 30px
+	letter-spacing: 1px
+	border-bottom: 1px solid #EEE
+	color: $grey-600
+
+
+//  . USER Avatar ----------------------------------
+
+.user-avatar
+	width: 40px
+	height: 40px
+	line-height: $header-height
+	border-radius: 50%
+
+
+//  . Box ----------------------------------------
+
+.box
+	text-align: center
+	padding: 20px
+	margin-bottom: 30px
+	cursor: default
+	background-color: #FFF
+
+	.icon
+		display: inline-block
+		margin-bottom: 20px
+		height: 100px
+		width: 100px
+
+	.title
+		font-size: 26px
+
+	.description
+		text-align: justify
+
+
+
+//  . Widgets -----------------------------
+
+.widget
+	color: #222
+	background-color: $white
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+
+	// Statistic
+	&.stat
+		margin-bottom: 30px
+		padding: 20px
+		display: flex
+		text-align: start
+
+		> .number
+			display: block
+			font-size: 40px
+			color: inherit
+
+		> .label
+			display: block
+			color: inherit
+
+
+
+//  . DATA TABLE ----------------------------------
+
+.data-table
+	margin-bottom: 30px
+	background-color: #FFF
+	border: 1px solid #DDD
+
+	> .header
+		display: flex
+		align-items: center
+		padding: 15px
+
+		> h4
+			margin: 0
+
+		> .items
+			margin: 0 0 0 auto
+
+	> .table
+		margin-bottom: 0
+
+		td, th
+			vertical-align: middle
+
+.btn-crud
+	padding: 8px
+	display: inline-flex
+	border-radius: 50%
+	border: 1px solid $deep-orange
+	color: $deep-orange
+	background-color: transparent
+
+	&:hover
+		color: $deep-orange-700
+		border-color: $deep-orange-700
+
+	> i
+		font-size: 18px
+
+
+
+//  . WRAPPER
+	---------------------------------------------
+
+.wrapper
+	margin-bottom: 30px
+	overflow: hidden
+	border-radius: 4px
+	background-color: $white
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .1)
+
+	> .header
+		padding: 15px
+		text-transform: capitalize
+		border-bottom: 1px solid #EEE
+
+	> .body
+		padding: 20px
+
+
+
+
+//  . Footer Copyrights --------------------
+
+.copyright
+	letter-spacing: 1px
+	text-align: center
+	font:
+		family: 'Raleway', sans-serif
+		size: 12px
+		weight: 400
+	color: #DDD

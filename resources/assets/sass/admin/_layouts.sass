@@ -1,0 +1,105 @@
+
+//  . HEADER ------------------------------------
+
+.site-header
+	position: fixed
+	z-index: 100
+	top: 0
+	left: 0
+	right: 0
+	height: $header-height
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	color: #333
+	background-color: $white
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2)
+	+transition(left, 0.4s)
+
+	+lg
+		left: $sidebar-width
+		right: 0
+
+
+//  . Sidebar -----------------------------------
+
+.site-sidebar
+	position: fixed
+	z-index: 200
+	left: 0
+	top: 0
+	height: 100%
+	width: $sidebar-width
+	color: #EEE
+	background-color: $primary-color-dark
+	transform-style: preserve-3d
+	+transform(translateX(-$sidebar-width))
+	+transition(all 0.4s)
+
+	+lg
+		width: $sidebar-width
+		+transform(translateX(0))
+
+	&.is-extended
+		+transform(translateX(0))
+
+
+.site-sidebar-overlay
+	display: none
+	z-index: 199
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background-color: transparentize($black, 0.4)
+
+
+//  . Content ---------------------------------
+
+.site-content
+	min-height: 100%
+	padding-top: $header-height + 30
+	padding-bottom: 30px
+	+transition(all 0.4s)
+
+	+lg
+		padding-left: $sidebar-width
+
+	&.is-extended
+		+transform(translateX($sidebar-width))
+
+		+lg
+			+transform(translateX(0))
+			padding-left: $sidebar-width
+
+
+//  . Login ----------------------------
+
+.site-auth
+	min-height: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	background:
+		size: cover
+		position: center
+
+	> .container-fluid
+		width: 100%
+
+
+
+//  . Main Footer Section -------------------------------------
+
+.footer
+	color: #DDD
+	padding: 30px 0
+	background-color: #222
+	+transition(all 0.4s)
+
+	+lg
+		padding-left: $sidebar-width
+
+	&.is-extended
+		+transform(translateX($sidebar-width))
